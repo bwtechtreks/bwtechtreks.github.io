@@ -23,44 +23,82 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Hi, I'm <span class="highlight">Brittany Wolfrom</span></h1>
-                    <p class="hero-subtitle">Customer Enthusiast | Team Builder | Digital Transformer | Cross functional Leader | Women In Technology | AWS She Builds Streamer</p>
-                    <p class="hero-description">I create customer experiences that wow!.</p>
-                    <div class="hero-buttons">
-                        <a href="projects.html" class="btn btn-primary">View My Work</a>
-                        <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img scr="images/BW 1.jpg" alt="Brittany Wolfrom at AWS" />
+                <h1>Hi, I'm <span class="highlight">Brittany Wolfrom</span></h1>
+                <p class="hero-subtitle">Customer Enthusiast | Team Builder | Digital Transformer | Cross functional Leader | Women In Technology | AWS She Builds Streamer</p>
+                <p class="hero-description">I create customer experiences that wow!</p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
         </section>
 
-        <section class="featured-projects">
+
+        <section class="content-hub-preview">
             <div class="container">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Project Name</h3>
-                        <p>Brief description of your project and the technologies used.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">AWS</span>
+                <h2>Latest from Content Hub</h2>
+                <div class="rotating-cards">
+                    <div class="card active">
+                        <img src="https://img.youtube.com/vi/O4z-UwCMKKA/maxresdefault.jpg" alt="Women In Tech Speaker" class="card-thumbnail">
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Speaking</span>
+                                <span class="card-date">2022</span>
+                            </div>
+                            <h3>Women In Tech Speaker</h3>
+                            <p>Speaking at Women in Tech events, sharing insights on career development and leadership.</p>
+                            <a href="https://youtu.be/O4z-UwCMKKA?si=cPBC0U0Hk4YWQHMR" target="_blank" class="card-link">Watch Video →</a>
                         </div>
-                        <a href="#" class="project-link">View Project →</a>
                     </div>
-                    <div class="project-card">
-                        <h3>Project Name</h3>
-                        <p>Brief description of your project and the technologies used.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">PostgreSQL</span>
+                    <div class="card">
+                        <img src="https://img.youtube.com/vi/p_acy26vszE/maxresdefault.jpg" alt="AWS She Builds Episode" class="card-thumbnail">
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Streaming</span>
+                                <span class="card-date">AWS She Builds</span>
+                            </div>
+                            <h3>AWS She Builds Episode</h3>
+                            <p>Featured episode discussing cloud technologies and empowering women in cloud computing.</p>
+                            <a href="https://www.youtube.com/watch?v=p_acy26vszE" target="_blank" class="card-link">Watch Episode →</a>
                         </div>
-                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                    <div class="card">
+                        <img src="https://img.youtube.com/vi/T5rDwzaqn1c/maxresdefault.jpg" alt="SWE Conference Speaker" class="card-thumbnail">
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-category">Speaking</span>
+                                <span class="card-date">2025</span>
+                            </div>
+                            <h3>SWE Conference Speaker</h3>
+                            <p>Speaking at Society of Women Engineers conferences on technical leadership.</p>
+                            <a href="https://www.youtube.com/watch?v=T5rDwzaqn1c" target="_blank" class="card-link">Watch Episode →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-dots">
+                    <span class="dot active" data-card="0"></span>
+                    <span class="dot" data-card="1"></span>
+                    <span class="dot" data-card="2"></span>
+                </div>
+                <a href="blog.html" class="btn btn-secondary" style="margin-top: 2rem;">View All Content</a>
+            </div>
+        </section>
+        
+        <section class="photo-gallery">
+            <div class="container">
+                <h2>Photo Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="photo-placeholder">
+                        <span><img src="images/swe 25 future proof.jpg" alt=""></span>
+                    </div>
+                    <div class="photo-placeholder">
+                        <span><img src="images/bw at summit 2023.jpg" alt=""></span>
+                    </div>
+                    <div class="photo-placeholder">
+                        <span><img src="images/2024 s3 bucket.jpg" alt=""></span>
+                    </div>
+                    <div class="photo-placeholder">
+                        <span><img src="images/pets.jpeg" alt=""></span>
                     </div>
                 </div>
             </div>
@@ -72,5 +110,35 @@
             <p>&copy; 2025 Brittany Wolfrom. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        let currentCard = 0;
+        const cards = document.querySelectorAll('.card');
+        const dots = document.querySelectorAll('.dot');
+        
+        function showCard(index) {
+            cards.forEach(card => card.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            cards[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+        
+        function nextCard() {
+            currentCard = (currentCard + 1) % cards.length;
+            showCard(currentCard);
+        }
+        
+        // Auto-rotate every 4 seconds
+        setInterval(nextCard, 4000);
+        
+        // Dot click handlers
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentCard = index;
+                showCard(currentCard);
+            });
+        });
+    </script>
 </body>
 </html>

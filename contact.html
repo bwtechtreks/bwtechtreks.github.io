@@ -38,17 +38,18 @@
                         <div class="contact-methods">
                             <div class="contact-method">
                                 <h3>📧 Email</h3>
-                                <p>brittanywolfrom@gmail.com</p>
+                                <button id="email-btn" class="email-reveal-btn">Click to reveal email</button>
+                                <p id="email-text" style="display: none;">brittanywolfrom@gmail.com</p>
                             </div>
                             
                             <div class="contact-method">
                                 <h3>💼 LinkedIn</h3>
-                                <p><a href="https://www.linkedin.com/in/brittany-wolfrom/">linkedin.com/in/yourprofile</a></p>
+                                <a href="https://www.linkedin.com/in/brittany-wolfrom/" target="_blank" class="contact-btn">Visit LinkedIn Profile</a>
                             </div>
                             
                             <div class="contact-method">
                                 <h3>🐙 GitHub</h3>
-                                <p><a href="https://github.com/yourusername">github.com/yourusername</a></p>
+                                <a href="https://github.com/bwtechtreks" target="_blank" class="contact-btn">Visit GitHub Profile</a>
                             </div>
                             
                         </div>
@@ -228,6 +229,39 @@
             font-style: italic;
         }
 
+        .email-reveal-btn {
+            background: #3B6255;
+            color: white !important;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        
+        .email-reveal-btn:hover {
+            background: #2d4a3e;
+            color: white !important;
+        }
+        
+        .contact-btn {
+            background: #3B6255;
+            color: white !important;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background: #2d4a3e;
+            color: white !important;
+        }
+
         @media (max-width: 768px) {
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -239,5 +273,12 @@
             }
         }
     </style>
+    
+    <script>
+        document.getElementById('email-btn').addEventListener('click', function() {
+            document.getElementById('email-btn').style.display = 'none';
+            document.getElementById('email-text').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
