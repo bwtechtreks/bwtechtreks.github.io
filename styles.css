@@ -391,7 +391,7 @@ footer {
     border-radius: 15px;
 }
 
-/* re:Invent Modal */
+/* LinkedIn Modal */
 .modal {
     display: none;
     position: fixed;
@@ -404,7 +404,7 @@ footer {
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #1A0B2E 0%, #2D1B69 100%);
+    background: white;
     margin: 15% auto;
     padding: 2rem;
     border-radius: 15px;
@@ -412,12 +412,12 @@ footer {
     max-width: 500px;
     text-align: center;
     position: relative;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    border: 2px solid #E91E63;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border: 3px solid #3B6255;
 }
 
 .close {
-    color: #E91E63;
+    color: #3B6255;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -425,20 +425,21 @@ footer {
     right: 1rem;
     top: 1rem;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
 .close:hover {
-    color: #F48FB1;
+    color: #2d4a3e;
 }
 
 .modal-content h2 {
-    color: #E91E63;
+    color: #3B6255;
     margin-bottom: 1rem;
-    text-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
+    font-size: 1.8rem;
 }
 
 .modal-content p {
-    color: #FFFFFF;
+    color: #64748b;
     margin-bottom: 2rem;
     line-height: 1.6;
 }
@@ -455,114 +456,26 @@ footer {
     text-align: center;
 }
 
-.linkedin-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 .modal-buttons .btn {
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 600;
     transition: all 0.3s;
 }
 
 .modal-buttons .btn-primary {
-    background: linear-gradient(45deg, #E91E63, #9C27B0);
+    background: #3B6255;
     color: white !important;
     border: none;
 }
 
 .modal-buttons .btn-primary:hover {
-    background: linear-gradient(45deg, #F48FB1, #BA68C8);
+    background: #2d4a3e;
     transform: translateY(-2px);
 }
 
-.modal-buttons .btn-secondary {
-    background: transparent;
-    color: #E91E63 !important;
-    border: 2px solid #E91E63;
-}
 
-.modal-buttons .btn-secondary:hover {
-    background: #E91E63;
-    color: white !important;
-}
-
-/* Fireworks Animation */
-.fireworks {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.firework {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    animation: firework 2s infinite;
-}
-
-.firework:nth-child(1) {
-    left: 20%;
-    top: 30%;
-    background: #E91E63;
-    animation-delay: 0s;
-}
-
-.firework:nth-child(2) {
-    left: 80%;
-    top: 20%;
-    background: #9C27B0;
-    animation-delay: 0.5s;
-}
-
-.firework:nth-child(3) {
-    left: 60%;
-    top: 40%;
-    background: #F48FB1;
-    animation-delay: 1s;
-}
-
-.firework:nth-child(4) {
-    left: 30%;
-    top: 60%;
-    background: #BA68C8;
-    animation-delay: 1.5s;
-}
-
-.firework:nth-child(5) {
-    left: 70%;
-    top: 70%;
-    background: #E91E63;
-    animation-delay: 0.8s;
-}
-
-@keyframes firework {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-        box-shadow: 0 0 0 0 currentColor;
-    }
-    50% {
-        transform: scale(1.5);
-        opacity: 0.8;
-        box-shadow: 0 0 20px 10px currentColor;
-    }
-    100% {
-        transform: scale(2);
-        opacity: 0;
-        box-shadow: 0 0 40px 20px transparent;
-    }
-}
 
 /* Hamburger Menu */
 .hamburger {
