@@ -1420,3 +1420,219 @@ footer {
         font-size: 2rem;
     }
 }
+
+
+/* Conference Resources Page Styles */
+.resources-hero {
+    background: linear-gradient(135deg, #8BA49A 0%, #3B6255 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.resources-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.resources-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.resources-content {
+    padding: 80px 0;
+}
+
+.resources-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.resources-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.resources-intro p {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(59, 98, 85, 0.15);
+    border-color: #8BA49A;
+}
+
+.resource-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.resource-info {
+    flex: 1;
+}
+
+.resource-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.resource-category {
+    background: #3B6255;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.resource-date {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.resource-info h3 {
+    font-size: 1.3rem;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+}
+
+.resource-info p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.resource-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.resource-link-btn {
+    background: linear-gradient(135deg, #3B6255, #8BA49A);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.resource-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 98, 85, 0.3);
+}
+
+.resource-link-btn.coming-soon {
+    background: #94a3b8;
+    cursor: default;
+    opacity: 0.8;
+}
+
+.resource-link-btn.coming-soon:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.resources-connect {
+    text-align: center;
+    background: #CBDED3;
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.resources-connect h3 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+}
+
+.resources-connect p {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.resources-connect-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-secondary-dark {
+    background: transparent;
+    color: #3B6255;
+    border: 2px solid #3B6255;
+}
+
+.btn-secondary-dark:hover {
+    background: #3B6255;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .resources-hero h1 {
+        font-size: 2rem;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .resources-intro h2 {
+        font-size: 2rem;
+    }
+
+    .resources-connect {
+        padding: 2rem 1.5rem;
+    }
+
+    .resources-connect-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.resources-section-title {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
