@@ -29,6 +29,43 @@
             color: #64748b;
             margin-bottom: 2rem;
         }
+        .print-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem 1.5rem;
+            background: #f0fdf4;
+            border: 2px solid #3B6255;
+            border-radius: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .print-bar p {
+            flex: 1;
+            color: #3B6255;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .print-btn {
+            background: #3B6255;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .print-btn:hover {
+            background: #2d4a3e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 98, 85, 0.3);
+        }
         .field {
             border-bottom: 2px solid #333;
             padding: 0.5rem 0;
@@ -111,12 +148,42 @@
             margin: 0.75rem 0;
         }
         @media print {
-            body { padding: 1rem; }
-            .section { break-inside: avoid; }
+            body {
+                padding: 0.5in;
+                max-width: 100%;
+                font-size: 11pt;
+            }
+            .print-bar {
+                display: none !important;
+            }
+            .section {
+                break-inside: avoid;
+                background: none;
+                border: 1px solid #ccc;
+                border-left: 4px solid #3B6255;
+            }
+            .warning {
+                break-inside: avoid;
+                border: 2px solid #f59e0b;
+            }
+            h1 { font-size: 2rem; }
+            .field { border-bottom: 1.5px solid #000; }
+            .numbered-item { border-bottom: 1.5px solid #000; }
+            a { color: #333; text-decoration: none; }
+            .footer { border-top: 1px solid #ccc; }
+        }
+        @page {
+            margin: 0.5in;
+            size: letter;
         }
     </style>
 </head>
 <body>
+    <div class="print-bar">
+        <p>📄 Print this worksheet or save as PDF to fill out before your next event.</p>
+        <button class="print-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+    </div>
+
     <h1>📋 Map Your Next Event — Worksheet</h1>
     <p class="subtitle">Use this before any conference, offsite, or high-energy professional event.</p>
 
