@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Routine Template - The Introvert's Edge | Brittany Wolfrom</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #3B6255;
+            margin: 2.5rem 0 1rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: #1e293b;
+            margin: 1.5rem 0 0.75rem;
+        }
+        .subtitle {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 0.25rem;
+        }
+        .intro {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 4px solid #3B6255;
+        }
+        .intro p {
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+        .intro p:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+            color: #3B6255;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        th {
+            background: #3B6255;
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        td {
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .deposit { color: #16a34a; font-weight: 600; }
+        .withdrawal { color: #dc2626; font-weight: 600; }
+        .controlled { color: #ca8a04; font-weight: 600; }
+        .math-box {
+            background: #ecfdf5;
+            border: 2px solid #3B6255;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .math-box p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .math-box .ratio {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #3B6255;
+        }
+        .technique {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 4px solid #3B6255;
+        }
+        .technique h3 {
+            color: #3B6255;
+            margin-top: 0;
+        }
+        .technique p {
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+        .script {
+            background: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            font-style: italic;
+            margin: 1rem 0;
+            color: #334155;
+        }
+        .exit-table td:first-child {
+            font-weight: 600;
+            color: #1e293b;
+            width: 35%;
+        }
+        .exit-table td:last-child {
+            font-style: italic;
+            color: #475569;
+        }
+        .rules-list {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+        .rules-list li {
+            margin-bottom: 0.5rem;
+            color: #475569;
+        }
+        .tracking-table td {
+            min-height: 2rem;
+            height: 2.5rem;
+        }
+        .scale-list {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+        .scale-list li {
+            margin-bottom: 0.25rem;
+            color: #475569;
+        }
+        .patterns-section {
+            margin: 1.5rem 0;
+        }
+        .patterns-section h4 {
+            color: #3B6255;
+            margin: 1rem 0 0.5rem;
+        }
+        .patterns-section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .patterns-section li {
+            margin-bottom: 0.5rem;
+            color: #475569;
+        }
+        .insight-box {
+            background: #ecfdf5;
+            border-radius: 10px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border: 1px solid #86efac;
+        }
+        .insight-box p {
+            color: #166534;
+            font-weight: 500;
+        }
+        .non-negotiables {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .non-negotiables h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+        .field {
+            border-bottom: 2px solid #333;
+            padding: 0.5rem 0;
+            margin: 0.75rem 0;
+            min-height: 2rem;
+        }
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #64748b;
+        }
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+        .footer a {
+            color: #3B6255;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media print {
+            body { padding: 1rem; }
+            .technique, .non-negotiables { break-inside: avoid; }
+            table { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🔄 Recovery Routine Template</h1>
+    <p class="subtitle">The Introvert's Edge: Leading with Authenticity in an AI-Powered World</p>
+    <p class="subtitle">Brittany Wolfrom | AWS Strategic Accounts Leader | WomenTech Conference</p>
+
+    <div class="intro">
+        <h2 style="margin-top: 0;">The Energy Bank Account</h2>
+        <p>Here's the mental model: every social interaction is a withdrawal from your energy account. Some are small (a quick hello). Some are massive (a 2-hour networking dinner with strangers). But they're all withdrawals.</p>
+        <p>You need deposits to stay solvent.</p>
+        <p>This isn't optional self-care fluff. This is operational. If you overdraw your account, you don't just feel tired — you show up flat, distracted, and unable to do the very things you came to do. You become a worse listener. A worse leader. A worse version of yourself.</p>
+        <p>The goal isn't to avoid withdrawals. The goal is to make them intentional and ensure your deposits keep pace.</p>
+    </div>
+
+    <h2>Conference Day Structure</h2>
+    <p>A realistic schedule showing how to balance deposits and withdrawals across a full conference day:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Type</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>7:00–8:00 AM</td>
+                <td>Solo breakfast</td>
+                <td class="deposit">🟢 Deposit</td>
+                <td>No breakfast meetings on Day 1. Eat alone. Read. Think.</td>
+            </tr>
+            <tr>
+                <td>8:00–10:00 AM</td>
+                <td>Morning sessions</td>
+                <td class="withdrawal">🔴 Withdrawal</td>
+                <td>Even listening in a crowd costs energy</td>
+            </tr>
+            <tr>
+                <td>10:00–10:30 AM</td>
+                <td>Break — solo walk</td>
+                <td class="deposit">🟢 Deposit</td>
+                <td>Outside if possible. No phone scrolling.</td>
+            </tr>
+            <tr>
+                <td>10:30 AM–12:00 PM</td>
+                <td>Sessions / networking</td>
+                <td class="withdrawal">🔴 Withdrawal</td>
+                <td>Cap conversations at 2-3 in this window</td>
+            </tr>
+            <tr>
+                <td>12:00–1:00 PM</td>
+                <td>Lunch with 1-2 people max</td>
+                <td class="controlled">🟡 Controlled</td>
+                <td>Pick people you know OR one new person. Not both.</td>
+            </tr>
+            <tr>
+                <td>1:00–1:30 PM</td>
+                <td>Hotel room / quiet space</td>
+                <td class="deposit">🟢 Deposit</td>
+                <td>30 min minimum. Set a timer so you don't feel guilty.</td>
+            </tr>
+            <tr>
+                <td>1:30–3:30 PM</td>
+                <td>Afternoon sessions</td>
+                <td class="withdrawal">🔴 Withdrawal</td>
+                <td>Your lowest-energy window. Be strategic about what you attend.</td>
+            </tr>
+            <tr>
+                <td>3:30–4:00 PM</td>
+                <td>Solo break</td>
+                <td class="deposit">🟢 Deposit</td>
+                <td>Coffee, walk, sit in lobby with headphones.</td>
+            </tr>
+            <tr>
+                <td>4:00–6:00 PM</td>
+                <td>Free / prep time</td>
+                <td class="deposit">🟢 Deposit</td>
+                <td>Use for reflection, notes, or just rest</td>
+            </tr>
+            <tr>
+                <td>6:00–8:00 PM</td>
+                <td>Evening networking</td>
+                <td class="withdrawal">🔴 Withdrawal</td>
+                <td>Optional. Set a hard time limit before you go.</td>
+            </tr>
+            <tr>
+                <td>8:00 PM+</td>
+                <td>Solo evening routine</td>
+                <td class="deposit">🟢 Deposit</td>
+                <td>Journal, read, call someone who recharges you, sleep.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="math-box">
+        <p>In this schedule: ~4.5 hours of deposits vs. ~7.5 hours of withdrawals</p>
+        <p class="ratio">Ratio: roughly 40/60 — sustainable for most introverts for 2-3 days</p>
+        <p>Any less recovery time and you'll hit a wall by Day 3.</p>
+    </div>
+
+    <h2>Three Key Techniques</h2>
+
+    <div class="technique">
+        <h3>1. The 24-Hour Recovery Rule</h3>
+        <p><strong>What it is:</strong> No major social commitments within 24 hours after a high-energy event.</p>
+        <p><strong>How it works:</strong></p>
+        <ul class="rules-list">
+            <li>Conference ends Friday → Saturday is yours. No brunch plans. No "quick coffee."</li>
+            <li>Big presentation Tuesday → Wednesday morning is blocked. No early meetings.</li>
+            <li>Multi-day offsite → The day after is recovery. Tell your team in advance.</li>
+        </ul>
+        <p><strong>Why it matters:</strong> Your brain processes social information during rest. If you stack events back-to-back, you lose the insights from the first one and show up depleted for the second.</p>
+        <div class="script">
+            "I keep the day after conferences clear for follow-ups and processing. I'll be available again on [date]."
+        </div>
+        <p>Nobody questions this. It sounds productive. It is productive — you're just also recovering.</p>
+    </div>
+
+    <div class="technique">
+        <h3>2. The Escape Plan</h3>
+        <p><strong>What it is:</strong> Always have a socially acceptable exit prepared before you enter any event.</p>
+
+        <table class="exit-table">
+            <thead>
+                <tr>
+                    <th>Situation</th>
+                    <th>What to Say</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Evening event running long</td>
+                    <td>"I have an early morning call tomorrow — it was great connecting."</td>
+                </tr>
+                <tr>
+                    <td>Networking that's draining you</td>
+                    <td>"I want to be fully present for tomorrow's sessions, so I'm going to head out."</td>
+                </tr>
+                <tr>
+                    <td>Conversation you need to leave</td>
+                    <td>"It was great catching up — I'm going to head out and let you connect with others."</td>
+                </tr>
+                <tr>
+                    <td>Group dinner invite you can't handle</td>
+                    <td>"I appreciate the invite! I'm going to recharge tonight so I can bring my best tomorrow."</td>
+                </tr>
+                <tr>
+                    <td>After your speaking slot</td>
+                    <td>"I'm going to step out and decompress, but I'd love to connect on LinkedIn."</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>The rules:</strong></p>
+        <ul class="rules-list">
+            <li>Decide your exit time before you arrive</li>
+            <li>Tell no one your real reason (you don't owe anyone an explanation)</li>
+            <li>Leave while you still have energy (not after you've hit empty)</li>
+            <li>Never apologize for leaving</li>
+        </ul>
+    </div>
+
+    <div class="technique">
+        <h3>3. The Energy Audit</h3>
+        <p><strong>What it is:</strong> A 2-week tracking exercise to identify your actual energy patterns (not the ones you assume you have).</p>
+
+        <table class="tracking-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Activity</th>
+                    <th>Energy After (1-5)</th>
+                    <th>Duration</th>
+                    <th>People (#)</th>
+                    <th>Drain or Energize?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+        </table>
+
+        <p><strong>Scale:</strong></p>
+        <ul class="scale-list">
+            <li>1 = completely drained, need to be alone immediately</li>
+            <li>2 = tired, low motivation</li>
+            <li>3 = neutral</li>
+            <li>4 = alert, engaged</li>
+            <li>5 = energized, could keep going</li>
+        </ul>
+
+        <div class="patterns-section">
+            <h4>Patterns to Look for After 2 Weeks</h4>
+
+            <h4>About drains:</h4>
+            <ul>
+                <li>What activities consistently score 1-2? (These need boundaries or elimination)</li>
+                <li>Is there a time of day when everything drains more? (Protect that window)</li>
+                <li>Does group size matter? What's your threshold number?</li>
+                <li>Are certain people consistently draining regardless of activity?</li>
+                <li>How long until an activity tips from neutral to draining?</li>
+            </ul>
+
+            <h4>About energizers:</h4>
+            <ul>
+                <li>What scores 4-5 consistently? (Do more of this. Seriously.)</li>
+                <li>Is it the activity or the people that energize you?</li>
+                <li>What's your ideal recovery activity? (Some people need silence; others need one trusted person)</li>
+                <li>Do you recharge faster alone or with one specific person?</li>
+            </ul>
+
+            <h4>About patterns:</h4>
+            <ul>
+                <li>How many hours of social interaction can you sustain before needing recovery?</li>
+                <li>What's your minimum recovery time after a high-withdrawal day?</li>
+                <li>Are mornings or afternoons better for high-energy tasks?</li>
+                <li>What's the maximum number of consecutive "on" days you can handle?</li>
+            </ul>
+        </div>
+
+        <div class="insight-box">
+            <p><strong>The insight:</strong> Most introverts discover they have more capacity than they thought — they've just been spending it on the wrong things. Once you know your patterns, you can design your life around them instead of fighting them.</p>
+        </div>
+    </div>
+
+    <div class="non-negotiables">
+        <h3>Quick-Reference: Your Non-Negotiables</h3>
+        <p>Before your next event, fill in:</p>
+        <div class="field"><strong>My minimum daily deposit time:</strong> _____ hours</div>
+        <div class="field"><strong>My maximum consecutive withdrawal time:</strong> _____ hours</div>
+        <div class="field"><strong>My hard stop for evening events:</strong> _____ PM</div>
+        <div class="field"><strong>My recovery day after the event:</strong> _____</div>
+        <div class="field"><strong>My go-to escape line:</strong> </div>
+        <div class="field"><strong>My #1 recharge activity:</strong> </div>
+    </div>
+
+    <div class="footer">
+        <p><em>This is one of four resource handouts from "The Introvert's Edge: Leading with Authenticity in an AI-Powered World" — a 45-minute conference session.</em></p>
+        <p>Connect with Brittany: <a href="https://linkedin.com/in/brittany-wolfrom" target="_blank">LinkedIn</a></p>
+    </div>
+</body>
+</html>
