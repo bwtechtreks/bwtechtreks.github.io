@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHC 2026 - Grace Hopper Celebration | Brittany Wolfrom</title>
+    <meta name="description" content="The Ally Audit: Are You Building Ladders or Maintaining Walls? — a session at Grace Hopper Celebration 2026 with Brittany Wolfrom, Patricia Cabral, and Allyson Bubb.">
+    <meta name="keywords" content="GHC 2026, Grace Hopper Celebration, Ally Audit, Inclusive Leadership, Women in Tech, Brittany Wolfrom, Patricia Cabral, Allyson Bubb, Gatekeeping, Allyship">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* GHC session-specific styles */
+        .ghc-session {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid #3B6255;
+        }
+        .ghc-session .session-tag {
+            display: inline-block;
+            background: #3B6255;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            letter-spacing: 0.03em;
+        }
+        .ghc-session h2 {
+            color: #1e293b;
+            font-size: 1.9rem;
+            margin-bottom: 0.75rem;
+        }
+        .ghc-session .session-lead {
+            font-style: italic;
+            color: #3B6255;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+        }
+        .ghc-session p { color: #475569; margin-bottom: 1rem; }
+        .ghc-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        .ghc-meta span {
+            background: #fff;
+            border: 1px solid #d7e0dc;
+            color: #3B6255;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+        }
+        .presenter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .presenter-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.75rem;
+            box-shadow: 0 2px 12px rgba(59, 98, 85, 0.08);
+            text-align: center;
+        }
+        .presenter-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            display: block;
+            border: 3px solid #8BA49A;
+        }
+        .presenter-card h3 {
+            color: #1e293b;
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .presenter-card .presenter-title {
+            color: #3B6255;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .presenter-card .presenter-company {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .presenter-card p { color: #475569; font-size: 0.95rem; margin-bottom: 1rem; }
+        .presenter-card a.presenter-contact {
+            color: #3B6255;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .presenter-card a.presenter-contact:hover { text-decoration: underline; }
+        .takeaways-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+        }
+        .takeaways-list li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            position: relative;
+            color: #475569;
+        }
+        .takeaways-list li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: #3B6255;
+            font-weight: 700;
+        }
+        .takeaways-list li strong { color: #1e293b; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Brittany Wolfrom</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Content Hub</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 70px;">
+        <section class="resources-hero">
+            <div class="container">
+                <h1>GHC 2026</h1>
+                <p class="resources-subtitle">The Ally Audit: Are You Building Ladders or Maintaining Walls?</p>
+            </div>
+        </section>
+
+        <section class="resources-content">
+            <div class="container">
+                <div class="resources-intro">
+                    <p style="margin-bottom: 1rem;"><a href="resources.html" style="color: #3B6255; font-weight: 600; text-decoration: none;">&larr; Back to Resources</a></p>
+                    <h2>Welcome, GHC Attendees!</h2>
+                    <p>Thanks for joining us at the Grace Hopper Celebration 2026. This page collects everything you need for our session in one place — the abstract, your facilitators, the skills you'll walk away with, and the downloadable resources. Check back, as materials will be added around the event.</p>
+                </div>
+
+                <div class="ghc-session">
+                    <span class="session-tag">ADVANCE · Leading Teams &amp; Cultures · Senior Leaders / Executives</span>
+                    <h2>The Ally Audit: Are You Building Ladders or Maintaining Walls?</h2>
+                    <p class="session-lead">"I had to fight for everything I earned — why should it be easier for them?"</p>
+                    <p>This mindset, often unconscious, perpetuates the very barriers that held us back. As women who've succeeded in tech through grit and resilience, we face a critical choice: do we smooth the path for those behind us, or do we unconsciously maintain the walls we had to climb?</p>
+                    <p>In this interactive workshop, you'll conduct an honest "Ally Audit" of your own leadership behaviors. Through structured self-assessment, peer dialogue, and real-world scenario analysis, you'll identify unconscious gatekeeping patterns and develop concrete strategies to shift from "earning it the hard way" to "lifting as we climb." You'll leave with a personalized action plan for inclusive leadership that breaks cycles rather than perpetuates them.</p>
+                    <p>This isn't about guilt — it's about awareness, growth, and consciously choosing to be the leader you needed when you were starting out.</p>
+                    <div class="ghc-meta">
+                        <span>60-minute interactive workshop</span>
+                        <span>Self-assessment &amp; peer dialogue</span>
+                        <span>Personalized action plan</span>
+                    </div>
+                </div>
+
+                <h3 class="resources-section-title">🎙️ Your Facilitators</h3>
+
+                <div class="presenter-grid">
+                    <div class="presenter-card">
+                        <img class="presenter-photo" src="images/ghc-brittany.jpg" alt="Brittany Wolfrom" onerror="this.style.display='none'">
+                        <h3>Brittany Wolfrom</h3>
+                        <div class="presenter-title">Leader, Customer Solutions Managers</div>
+                        <p>Technology leader focused on strategic customer solutions, digital transformation, and championing women in tech. Leads the session's opening framing, overall facilitation, and closing resources.</p>
+                        <a class="presenter-contact" href="https://www.linkedin.com/in/brittany-wolfrom/" target="_blank">Connect on LinkedIn &rarr;</a>
+                    </div>
+
+                    <div class="presenter-card">
+                        <img class="presenter-photo" src="images/ghc-paty.jpg" alt="Patricia Cabral" onerror="this.style.display='none'">
+                        <h3>Patricia Cabral</h3>
+                        <div class="presenter-title">Senior Director of Software Engineering</div>
+                        <p>Patricia Cabral‑Mercado leads strategic engineering initiatives that strengthen system stability, accelerate platform modernization, and drive alignment with the organization's technology vision. With 25 years of enterprise experience — and as an entrepreneur, cancer survivor, and triathlete — she brings resilience, authenticity, and purpose to her leadership, and is a passionate advocate for diversity in technology and building inclusive communities.</p>
+                        <a class="presenter-contact" href="https://www.linkedin.com/in/patricia-cabral-a5296937/" target="_blank">Connect on LinkedIn &rarr;</a>
+                    </div>
+
+                    <div class="presenter-card">
+                        <img class="presenter-photo" src="images/ghc-ally.jpg" alt="Allyson Bubb" onerror="this.style.display='none'">
+                        <h3>Allyson Bubb</h3>
+                        <div class="presenter-title">Executive Coach &amp; Cybersecurity Education Expert</div>
+                        <p>Coaches leaders to be more authentic in an artificial age so they can deliver awesome results, building sustainable habits for clarity, calm, and long-term effectiveness. A woman in cybersecurity who walks the talk, she holds an MBA, is a HeartMath certified coach, and is a keynote speaker and author. Founder of a coaching practice delivering transformational programs to leaders and teams.</p>
+                        <a class="presenter-contact" href="https://www.linkedin.com/in/allyson-bubb/" target="_blank">Connect on LinkedIn &rarr;</a>
+                    </div>
+                </div>
+
+                <h3 class="resources-section-title">🧭 What You'll Walk Away With</h3>
+                <ul class="takeaways-list">
+                    <li><strong>Completed Ally Audit</strong> — a personal assessment identifying your strengths and growth areas in inclusive leadership.</li>
+                    <li><strong>Pattern recognition skills</strong> — the ability to spot unconscious gatekeeping behaviors in yourself and others.</li>
+                    <li><strong>Personalized action plan</strong> — specific, measurable commitments with 30/60/90-day milestones.</li>
+                    <li><strong>Accountability partnership</strong> — a peer connection for ongoing support and honest feedback.</li>
+                    <li><strong>Scenario response framework</strong> — tools for making inclusive decisions in real-time leadership moments.</li>
+                    <li><strong>Resource library</strong> — curated readings, tools, and apps for continued growth (below).</li>
+                    <li><strong>Brave space facilitation skills</strong> — techniques for having difficult conversations about bias and barriers.</li>
+                    <li><strong>Leadership legacy clarity</strong> — an articulated vision for the impact you want to have on the next generation.</li>
+                </ul>
+
+                <h3 class="resources-section-title">📋 Downloadable Resources</h3>
+
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📝</div>
+                        <div class="resource-info">
+                            <div class="resource-meta">
+                                <span class="resource-category">Assessment</span>
+                            </div>
+                            <h3>The Ally Audit Self-Assessment</h3>
+                            <p>The five-dimension self-assessment from the session — mentorship patterns, opportunity distribution, feedback delivery, advocacy behaviors, and gatekeeping signals. Score yourself and spot your blind spots.</p>
+                            <div class="resource-links">
+                                <span class="resource-link-btn coming-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🗺️</div>
+                        <div class="resource-info">
+                            <div class="resource-meta">
+                                <span class="resource-category">Template</span>
+                            </div>
+                            <h3>Inclusive Leadership Action Plan</h3>
+                            <p>The structured 30/60/90-day template for turning your audit into commitments — immediate start/stop/continue behaviors, mentorship investments, opportunities to open, and accountability mechanisms.</p>
+                            <div class="resource-links">
+                                <span class="resource-link-btn coming-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🤝</div>
+                        <div class="resource-info">
+                            <div class="resource-meta">
+                                <span class="resource-category">Guide</span>
+                            </div>
+                            <h3>Accountability Partner Guide</h3>
+                            <p>A simple guide for keeping the momentum going with the partner you met in the room — check-in prompts, cadence suggestions, and honest questions to keep each other lifting as you climb.</p>
+                            <div class="resource-links">
+                                <span class="resource-link-btn coming-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🧩</div>
+                        <div class="resource-info">
+                            <div class="resource-meta">
+                                <span class="resource-category">Framework</span>
+                            </div>
+                            <h3>Gatekeeping Scenario Response Framework</h3>
+                            <p>The real-world scenarios from the workshop with reframes — turning "she needs to prove herself first" or "she's too junior for that" into inclusive, in-the-moment leadership decisions.</p>
+                            <div class="resource-links">
+                                <span class="resource-link-btn coming-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">📚</div>
+                        <div class="resource-info">
+                            <div class="resource-meta">
+                                <span class="resource-category">Resource Library</span>
+                            </div>
+                            <h3>Curated Resource Library</h3>
+                            <p>The readings, podcasts, and tools referenced in the session for continued growth in allyship and inclusive leadership — the destination behind the QR code we shared on screen.</p>
+                            <div class="resource-links">
+                                <span class="resource-link-btn coming-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resources-connect">
+                    <h3>Let's Stay Connected</h3>
+                    <p>Enjoyed The Ally Audit at GHC? We'd love to hear your takeaways and continue the conversation — connect with your facilitators above.</p>
+                    <div class="resources-connect-buttons">
+                        <a href="https://www.linkedin.com/in/brittany-wolfrom/" target="_blank" class="btn btn-primary">Connect on LinkedIn</a>
+                        <a href="contact.html" class="btn btn-secondary-dark">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Brittany Wolfrom. All rights reserved.</p>
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">Special thanks to my amazing friend Kanbo for building this awesome template! 🎉</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

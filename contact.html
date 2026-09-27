@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Brittany Wolfrom - AWS Technology Leader | Let's Connect</title>
+    <meta name="description" content="Get in touch with Brittany Wolfrom for technology leadership opportunities, AWS consulting, speaking engagements, or collaboration on digital transformation projects.">
+    <meta name="keywords" content="Contact Brittany Wolfrom, AWS Consultant, Technology Leader, Speaking Opportunities, Digital Transformation">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Brittany Wolfrom</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Content Hub</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 70px;">
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p class="contact-subtitle">Let's discuss opportunities and collaborate on exciting projects</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-intro">
+                    <h2>Ready to Build Something Amazing Together?</h2>
+                    <p>Whether you're looking for a technology leader, strategic partner, or just want to chat about the latest in AI and digital transformation – I'd love to connect!</p>
+                </div>
+                
+                <div class="contact-cards-grid">
+                    <div class="contact-card email-card" id="email-card">
+                        <div class="card-icon">📧</div>
+                        <h3>Drop Me a Line</h3>
+                        <p>Best for detailed discussions and opportunities</p>
+                        <button id="email-btn" class="contact-action-btn">Reveal Email</button>
+                        <div id="email-reveal" class="email-reveal">
+                            <p class="revealed-email">brittanywolfrom@gmail.com</p>
+                            <button class="copy-btn" onclick="copyEmail()">📋 Copy</button>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card linkedin-card">
+                        <div class="card-icon">💼</div>
+                        <h3>Let's Network</h3>
+                        <p>Connect professionally and stay updated</p>
+                        <a href="https://www.linkedin.com/in/brittany-wolfrom/" target="_blank" class="contact-action-btn">Connect on LinkedIn</a>
+                    </div>
+                    
+                    <div class="contact-card github-card">
+                        <div class="card-icon">🚀</div>
+                        <h3>Check My Code</h3>
+                        <p>Explore my projects and contributions</p>
+                        <a href="https://github.com/bwtechtreks" target="_blank" class="contact-action-btn">Visit GitHub</a>
+                    </div>
+                    
+                    <div class="contact-card location-card">
+                        <div class="card-icon">🌍</div>
+                        <h3>Where I'm Based</h3>
+                        <p>Arlington, VA</p>
+                        <div class="location-note">Open to relocate for the right opportunity!</div>
+                    </div>
+                </div>
+                
+                <div class="availability-banner">
+                    <div class="availability-content">
+                        <div class="status-indicator">🟢</div>
+                        <div class="status-text">
+                            <h3>Currently Available</h3>
+                            <p>Actively seeking new full-time opportunities in technology leadership</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <h3>What's Next?</h3>
+                    <p>I typically respond within 24 hours. Looking forward to hearing about your exciting projects!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Brittany Wolfrom. All rights reserved.</p>
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">Special thanks to my amazing friend Kanbo for building this awesome template! 🎉</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('email-btn').addEventListener('click', function() {
+            document.getElementById('email-btn').style.display = 'none';
+            document.getElementById('email-reveal').style.display = 'block';
+            document.getElementById('email-card').classList.add('revealed');
+        });
+        
+        function copyEmail() {
+            navigator.clipboard.writeText('brittanywolfrom@gmail.com').then(function() {
+                const copyBtn = document.querySelector('.copy-btn');
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = '✓ Copied!';
+                copyBtn.style.background = '#22c55e';
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalText;
+                    copyBtn.style.background = '';
+                }, 2000);
+            });
+        }
+        
+        // Add hover animations to cards
+        document.querySelectorAll('.contact-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
